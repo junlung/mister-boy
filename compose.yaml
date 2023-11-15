@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    container_name: mister-boy
+    expose:
+      - 8888
+    ports:
+      - '8888:8888'
+    networks:
+      - caddyshack
+
+networks:
+  caddyshack:
+    name: caddyshack
